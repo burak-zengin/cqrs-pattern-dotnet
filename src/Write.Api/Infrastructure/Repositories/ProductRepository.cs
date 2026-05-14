@@ -1,8 +1,8 @@
-﻿using Domain.Products;
-using Write.Api.Domain.Products;
-using Write.Api.Persistence;
+using Domain.Products;
+using Domain.Products.Repositories;
+using Write.Api.Infrastructure.Persistence;
 
-namespace Write.Api.Infrustructure.Repositories;
+namespace Write.Api.Infrastructure.Repositories;
 
 public class ProductRepository(WriteDbContext context) : IProductWriteRepository
 {

@@ -75,14 +75,12 @@ http://localhost:8083/connectors
     "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
     "tasks.max": "1",
     "topic.prefix": "datatransfer",
-    "database.hostname": "host.docker.internal",
+    "database.hostname": "write.database",
     "database.port": "5432",
     "database.user": "postgres",
     "database.password": "P@ssw0rd!",
     "database.dbname": "Products",
-    "database.server.name": "host.docker.internal",
-    "plugin.name": "pgoutput",
-    "name": "PostgresConnector"
+    "plugin.name": "pgoutput"
   }
 }
 ```

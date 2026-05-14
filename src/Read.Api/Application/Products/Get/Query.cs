@@ -1,6 +1,6 @@
-﻿using MediatR;
-using Write.Api.Domain.Products;
+﻿using Domain.Products.ReadModels;
+using MediatR;
 
 namespace Read.Api.Application.Products.Get;
 
-public record Query(int Id) : IRequest<Product>;
+public record Query(int Id) : IRequest<ProductReadModel?>;

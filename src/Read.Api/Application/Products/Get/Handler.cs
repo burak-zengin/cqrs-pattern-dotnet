@@ -1,12 +1,12 @@
-﻿using Domain.Products;
+﻿using Domain.Products.ReadModels;
+using Domain.Products.Repositories;
 using MediatR;
-using Write.Api.Domain.Products;
 
 namespace Read.Api.Application.Products.Get;
 
-public class Handler(IProductReadRepository repository) : IRequestHandler<Query, Product>
+public class Handler(IProductReadRepository repository) : IRequestHandler<Query, ProductReadModel?>
 {
-    public async Task<Product> Handle(Query request, CancellationToken cancellationToken)
+    public async Task<ProductReadModel?> Handle(Query request, CancellationToken cancellationToken)
     {
         return await repository.GetAsync(request.Id, cancellationToken);
     }
